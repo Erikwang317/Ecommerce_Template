@@ -1,5 +1,8 @@
 import React from 'react';
 import './styles.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 const Header = () => {
   return (
@@ -17,10 +20,15 @@ const Header = () => {
         </ul>
       </nav>
       <div className='headerSearch'>
-        <input type="text" placeholder="Search" className='headerSearchInput'/>
+        <input type="text" placeholder="Enter a keyword or part but " className='headerSearchInput'/>
         <button type="button" className='headerCart'>🔍</button>
       </div>
+      <div className='signin'>
+        <FontAwesomeIcon icon={faUser} />
+        <p>Sign in/Register</p>
+      </div>
       <button type="button" className='headerCart'>🛒</button>
+     
     </header>
   );
 };
