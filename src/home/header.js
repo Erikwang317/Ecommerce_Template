@@ -1,36 +1,58 @@
 import React from 'react';
 import './styles.css'
+import searchBackgroundImage from '../images/searchBackground.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faGlobe, faHeadset } from '@fortawesome/free-solid-svg-icons';
 
 
 const Header = () => {
   return (
-    <header className='header'>
-      <div className='logoContainer'>
-        <img src="/logo.png" alt="Logo" className='headerLogo' />
+    <header className="header-container">
+      <img src={searchBackgroundImage} alt="Alibaba background" className="backgroundImage"/>
+      <div className="top-bar">
+        <div className='logoContainer'>
+          <img src="/logo.png" alt="Logo" className='headerLogo' />
+        </div>
+        <div className='top-bar-right'>
+          <p>Deliver to: US</p>
+          <FontAwesomeIcon icon={faGlobe}/>
+          <p>Language: English-USD</p>
+          <FontAwesomeIcon icon={faUser}/>
+          <p>Sign in</p>
+          <button href="#" className="sign-up-btn">Sign Up</button>
+        </div>
       </div>
-      <nav>
-        <ul className='headerNav'>
-          <li className='headerNavItem'><a href="/">Home</a></li>
-          <li className='headerNavItem'><a href="/shop">Shop</a></li>
-          <li className='headerNavItem'><a href="/deal">Deals</a></li>
-          <li className='headerNavItem'><a href="/about">About us</a></li>
-          <li className='headerNavItem'><a href="/contact">Contact us</a></li>
-        </ul>
-      </nav>
-      <div className='headerSearch'>
-        <input type="text" placeholder="Enter a keyword or part but " className='headerSearchInput'/>
-        <button type="button" className='headerCart'>🔍</button>
+      <div className='sub-header'>
+        <div>
+          <p>All categories</p>
+          <p>Featured selections</p>
+          <p>Trade Assurance</p>
+        </div>
+        <div>
+          <p>Buyer Central</p>
+          <p>Help Center</p>
+          <p>Get the app</p>
+          <p>Become a supplier</p>
+        </div>
+
       </div>
-      <div className='signin'>
-        <FontAwesomeIcon icon={faUser} />
-        <p>Sign in/Register</p>
+      <div className='search-title-container'>
+        <h1>Learn about Venream.com</h1>
+        <p>The leading B2B ecommerce platform for global trade</p>
       </div>
-      <button type="button" className='headerCart'>🛒</button>
-     
+      <div className="search-container">
+        <input type="text" placeholder="Search for products, brands and more" className="search-input"/>
+        <button className="search-button">Search</button>
+      </div>
+      <div className="frequently-searched">
+        <span>Frequently searched:</span>
+        <button className="frequently-searched-btn">electric scooter</button>
+        <button className="frequently-searched-btn">iphones 15 pro max</button>
+        <button className="frequently-searched-btn">bubble house</button>
+      </div>
     </header>
   );
-};
+}
 
 export default Header;
+

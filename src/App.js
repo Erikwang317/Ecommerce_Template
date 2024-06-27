@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Banner/>
+      {/* <Banner/> */}
       <FeaturedProducts products = {featuredProducts}/>
       <IndustryGrid />
       <NewProducts products = {newProducts}/>
