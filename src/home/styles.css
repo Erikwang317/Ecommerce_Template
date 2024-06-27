@@ -73,6 +73,10 @@
     text-transform: uppercase;
 }
 
+.frequently-searched-btn:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
 .top-bar p, .sub-header p {
     color: #fff;
     margin-right: 15px;
